@@ -9,4 +9,8 @@ jobs:
       - name: Install Android SDK Manager
         uses: android-actions/setup-android@v3
         with:
-          packages: 'ndk;26.3.11579264'
+          packages: ''
+      - name: Install NDK
+        run: |
+          sdkmanager --install "ndk;26.3.11579264"
+          echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/26.3.11579264" >> $GITHUB_ENV
