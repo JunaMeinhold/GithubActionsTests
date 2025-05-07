@@ -14,3 +14,4 @@ jobs:
         run: |
           sdkmanager --install "ndk;26.3.11579264"
           echo "ANDROID_NDK_HOME=$ANDROID_SDK_ROOT/ndk/26.3.11579264" >> $GITHUB_ENV
+          echo $ANDROID_SDK_ROOT
